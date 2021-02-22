@@ -9,9 +9,9 @@ function Tours({ tours, removeTour }) {
         <div className='underline'></div>
       </div>
       <div>
-        {/* {tours.map(tour => {
-          return <Tour />;
-        })} */}
+        {tours.map(tour => {
+          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
+        })}
       </div>
     </section>
   );
